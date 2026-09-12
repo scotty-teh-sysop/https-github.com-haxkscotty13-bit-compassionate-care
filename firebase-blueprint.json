@@ -1,0 +1,85 @@
+{
+  "entities": {
+    "seniors": {
+      "title": "Senior Profiles",
+      "description": "Profiles of seniors receiving companionship care, including interests, routine preferences, comfort topics, emergency contacts, and favorite music eras.",
+      "fields": {
+        "familyUserId": { "type": "string", "description": "ID of the family member managing the care" },
+        "name": { "type": "string", "description": "Full name of the senior" },
+        "age": { "type": "number", "description": "Senior age" },
+        "avatar": { "type": "string", "description": "Profile picture URL" },
+        "relation": { "type": "string", "description": "Relation to family user (e.g. Mother)" },
+        "address": { "type": "string", "description": "Physical residence address" },
+        "coordinates": { "type": "map", "description": "Latitude and longitude for GPS geofencing" },
+        "interests": { "type": "array", "description": "List of hobbies and social interests" },
+        "routinePreferences": { "type": "string", "description": "Daily comfort routine" },
+        "specialNeeds": { "type": "string", "description": "Mobility and non-medical preferences" },
+        "comfortTopics": { "type": "array", "description": "Delightful topics to reminisce about" },
+        "topicsToAvoid": { "type": "array", "description": "Sensitive subjects to avoid" },
+        "favoriteEra": { "type": "string", "description": "Favorite decade for music and memory starters (1940s, 1950s, 1960s, 1970s)" },
+        "emergencyContactName": { "type": "string", "description": "Name of emergency contact" },
+        "emergencyContactPhone": { "type": "string", "description": "Phone number of emergency contact" }
+      }
+    },
+    "companions": {
+      "title": "Vetted Companions",
+      "description": "Verified social companion profiles with Checkr vetting status, hourly rates, availability, and background check records.",
+      "fields": {
+        "name": { "type": "string", "description": "Companion full name" },
+        "title": { "type": "string", "description": "Professional title and specialty" },
+        "avatar": { "type": "string", "description": "Avatar portrait URL" },
+        "rating": { "type": "number", "description": "Average review rating" },
+        "reviewCount": { "type": "number", "description": "Number of family reviews" },
+        "hourlyRate": { "type": "number", "description": "Hourly booking rate in USD" },
+        "distanceMiles": { "type": "number", "description": "Distance radius from center" },
+        "bio": { "type": "string", "description": "Companion introduction and experience" },
+        "locationName": { "type": "string", "description": "Neighborhood/city" },
+        "vetting": { "type": "map", "description": "Checkr background verification credentials" },
+        "interests": { "type": "array", "description": "Hobbies and companion passions" },
+        "availableDays": { "type": "array", "description": "Available days of week" }
+      }
+    },
+    "bookings": {
+      "title": "Visits and Bookings",
+      "description": "Companion bookings including status, GPS check-in/out timestamps, post-visit photo reports, and 30-second audio voice memos.",
+      "fields": {
+        "seniorId": { "type": "string", "description": "Target senior profile ID" },
+        "seniorName": { "type": "string", "description": "Target senior name" },
+        "companionId": { "type": "string", "description": "Booked companion ID" },
+        "companionName": { "type": "string", "description": "Booked companion name" },
+        "scheduledDate": { "type": "string", "description": "Date of planned visit" },
+        "startTime": { "type": "string", "description": "Scheduled start time" },
+        "durationHours": { "type": "number", "description": "Visit duration in hours" },
+        "totalCost": { "type": "number", "description": "Authorized payment total" },
+        "status": { "type": "string", "description": "Status: requested, accepted, in_progress, completed, cancelled" },
+        "visitTracking": { "type": "map", "description": "GPS geofence check-in and check-out logs" },
+        "familyCheckIn": { "type": "map", "description": "Family pre-visit check-in confirmation and arrival access notes" },
+        "fcmReminder1HrSent": { "type": "boolean", "description": "Whether 1-hour pre-visit FCM push notification was dispatched" },
+        "postVisitSummary": { "type": "map", "description": "Post-visit photos, mood, activities, notes, and audio voice memo" }
+      }
+    },
+    "notifications": {
+      "title": "Push Notifications",
+      "description": "FCM notifications for visit milestones, 1-hour pre-visit reminders, GPS check-in alerts, and post-visit report releases.",
+      "fields": {
+        "title": { "type": "string", "description": "Notification title" },
+        "body": { "type": "string", "description": "Notification body" },
+        "timestamp": { "type": "string", "description": "Delivery timestamp" },
+        "read": { "type": "boolean", "description": "Read status" },
+        "type": { "type": "string", "description": "Type: status, checkin, summary, emergency, booking, reminder" },
+        "data": { "type": "map", "description": "Action payload metadata for check-in and detail reviews" }
+      }
+    },
+    "fcmTokens": {
+      "title": "FCM Device Tokens",
+      "description": "Registered Web Push FCM tokens for families receiving 1-hour pre-visit reminders.",
+      "fields": {
+        "token": { "type": "string", "description": "FCM device registration token" },
+        "userId": { "type": "string", "description": "Family user identifier" },
+        "device": { "type": "string", "description": "Client device and browser platform" },
+        "registeredAt": { "type": "string", "description": "Registration timestamp" },
+        "updatedAt": { "type": "string", "description": "Last update timestamp" }
+      }
+    }
+  }
+}

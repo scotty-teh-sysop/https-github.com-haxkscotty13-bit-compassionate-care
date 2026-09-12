@@ -1,0 +1,6 @@
+{
+  "name": "Compassionate Care",
+  "description": "On-demand companion-matching platform for non-medical senior visits with vetted companions, interactive map discovery, GPS check-ins, and post-visit reports.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

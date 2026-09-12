@@ -1,0 +1,157 @@
+{
+  "id": "/",
+  "name": "Compassionate Care - Senior Companion Matching",
+  "short_name": "Compassion",
+  "description": "On-demand companion-matching platform for non-medical senior visits with vetted companions, interactive map discovery, GPS check-ins, and post-visit reports.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "any",
+  "theme_color": "#065f46",
+  "background_color": "#ffffff",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": [
+    "lifestyle",
+    "social",
+    "medical",
+    "family"
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshot-wide.jpg",
+      "sizes": "1376x768",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Compassionate Care Desktop Dashboard & Companion Map"
+    },
+    {
+      "src": "/screenshots/screenshot-narrow.jpg",
+      "sizes": "768x1376",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Compassionate Care Mobile Companion Booking & Verification"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Find Companions",
+      "short_name": "Companions",
+      "description": "Discover and match with vetted senior companions nearby",
+      "url": "/?tab=companions",
+      "icons": [
+        {
+          "src": "/icons/icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "My Scheduled Visits",
+      "short_name": "Visits",
+      "description": "View visits calendar, GPS check-ins, and visit notes",
+      "url": "/?tab=bookings",
+      "icons": [
+        {
+          "src": "/icons/icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Companion Live Map",
+      "short_name": "Live Map",
+      "description": "Interactive map discovery of companions in your area",
+      "url": "/?tab=map",
+      "icons": [
+        {
+          "src": "/icons/icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false,
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "edge_side_panel": {
+    "preferred_width": 480
+  }
+}
